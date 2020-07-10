@@ -36,3 +36,4 @@ COPY disable-xdebug.sh /bin/dxd
 COPY enable-xdebug.sh /bin/exd
 ADD php.ini /usr/local/etc/php/conf.d/php.ini
 ADD xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+RUN apk --no-cache add shadow && usermod -u 1000 www-data
